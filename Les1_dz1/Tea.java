@@ -3,8 +3,8 @@ package Les1_dz1;
 /**
  * Tea
  */
-public class Tea extends hotDrink {
-    Integer temperature;
+public class Tea extends HotDrink {
+    private Integer temperature;
 
     @Override
     public String toString() {

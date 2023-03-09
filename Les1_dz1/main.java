@@ -1,20 +1,17 @@
 package Les1_dz1;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
 
-        Tea black = new Tea(45, 220, "Safia ", 66);
-        Tea green = new Tea(50, 235, "Maryam", 72);
-        Tea red = new Tea(57, 223, "Ahmad", 80);
+        HotDrink tea = new Tea(121, 80, "Ahmad");
 
-        ArrayList<Tea> availableAssortment = new ArrayList<>();
-        availableAssortment.add(black);
-        availableAssortment.add(green);
-        availableAssortment.add(red);
+        Iterator<String> components = tea;
 
-        hotDrinksVendingM.initProduct(availableAssortment);
-        hotDrinksVendingM.getProduct(black, 200, 70);
+        while (components.hasNext()) {
+            System.out.println(tea.next());
+        }
     }
 }

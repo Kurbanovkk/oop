@@ -1,9 +1,11 @@
 package Les1_dz1;
 
-public class hotDrink {
-    String name;
-    int price;
-    int volume;
+import java.util.Iterator;
+
+public class HotDrink implements Iterator<String> {
+    private String name;
+    private int price;
+    private int volume;
 
     @Override
     public String toString() {
@@ -11,13 +13,13 @@ public class hotDrink {
                 getVolume());
     }
 
-    public hotDrink(int price, int volume, String name) {
+    public HotDrink(int price, int volume, String name) {
         this.name = name;
         this.price = price;
         this.volume = volume;
     }
 
-    public hotDrink(int price, String name) {
+    public HotDrink(int price, String name) {
         this(price, 200, name);
     }
 
@@ -43,5 +45,29 @@ public class hotDrink {
 
     public void setVolume(int volume) {
         this.volume = volume;
+    }
+
+    int index;
+
+    @Override
+    public boolean hasNext() {
+        return index++ < 3;
+    }
+
+    @Override
+    public String next() {
+        switch (index) {
+            case 1:
+                // return firstName;
+                return String.format("Наименование товара - %s", name);
+            case 2:
+                // return lastName;
+                return String.format("Цена товара - %d", price);
+            case 3:
+                // return age;
+                return String.format("Объем товара - %d", volume);
+
+        }
+        return name;
     }
 }

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * hotDrinksVendingM
  */
-public class hotDrinksVendingM {
+public class HotDrinksVendingM {
 
     private static ArrayList<Tea> assortment = new ArrayList<>();
 
