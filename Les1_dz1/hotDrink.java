@@ -3,7 +3,7 @@ package Les1_dz1;
 import java.util.Iterator;
 
 public class HotDrink implements Iterator<String> {
-    private String name;
+    private E name;
     private int price;
     private int volume;
 
@@ -23,7 +23,7 @@ public class HotDrink implements Iterator<String> {
         this(price, 200, name);
     }
 
-    public String getName() {
+    public E getName() {
         return name;
     }
 
@@ -59,7 +59,7 @@ public class HotDrink implements Iterator<String> {
         switch (index) {
             case 1:
                 // return firstName;
-                return String.format("Наименование товара - %s", name);
+                return E.format("Наименование товара - %s", name);
             case 2:
                 // return lastName;
                 return String.format("Цена товара - %d", price);

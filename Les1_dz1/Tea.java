@@ -3,8 +3,8 @@ package Les1_dz1;
 /**
  * Tea
  */
-public class Tea extends HotDrink {
-    private Integer temperature;
+public class Tea<E> extends HotDrink {
+    private E temperature;
 
     @Override
     public String toString() {
@@ -12,12 +12,12 @@ public class Tea extends HotDrink {
                 getName(), getPrice(), getVolume(), getTemperature());
     }
 
-    public Tea(int price, int volume, String name, int temperature) {
+    public Tea(int price, int volume, String name, E temperature) {
         super(price, volume, name);
         this.temperature = temperature;
     }
 
-    public Tea(int price, String name, int temperature) {
+    public Tea(int price, String name, E temperature) {
         super(price, name);
         this.temperature = temperature;
     }
@@ -32,11 +32,11 @@ public class Tea extends HotDrink {
         this.temperature = 90;
     }
 
-    public int getTemperature() {
+    public E getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(int temperature) {
-        this.temperature = temperature;
+    public E setTemperature(E temperature) {
+        return this.temperature = temperature;
     }
 }

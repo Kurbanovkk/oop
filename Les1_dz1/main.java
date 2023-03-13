@@ -8,6 +8,9 @@ public class Main {
 
         HotDrink tea = new Tea(121, 80, "Ahmad");
 
+        Tea<Integer> tea2 = new Tea<Integer>(100, 45, "Safia", 85);
+        System.out.println(tea2);
+
         Iterator<String> components = tea;
 
         while (components.hasNext()) {
